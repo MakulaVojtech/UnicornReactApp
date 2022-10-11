@@ -22,10 +22,9 @@ function App() {
         <button onClick={() => {
           items.push({"item": inputValue, "color": inputColor});
           setItems([...items]);
-          setColors([...colors])
-          console.log(colors);
+          console.log(items)
         }}>Vlož</button>
-        {items.map((item, index)=> <ListItem item={item.item} key={index} style={{"backgroundColor":item.color}}/>)}
+        {items.map((item, index)=> <ListItem item={item.item} key={index} style={{"color":item.color}}/>)}
 
     </div>
   );
