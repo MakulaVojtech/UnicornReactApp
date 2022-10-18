@@ -20,11 +20,13 @@ function App() {
 
 
         <button onClick={() => {
-          items.push({"item": inputValue, "color": inputColor});
+          items.push({"item": inputValue, color: inputColor});
           setItems([...items]);
           console.log(items)
-        }}>Vlož</button>
-        {items.map((item, index)=> <ListItem item={item.item} key={index} style={{"color":item.color}}/>)}
+        }}
+        disabled={inputValue?.length < 5 ? true : false}
+        >Vlož</button>
+        {items.map((item, index)=> <ListItem item={item.item} key={index} style={{color:item.color}}/>)}
 
     </div>
   );
